@@ -11,7 +11,7 @@ been the world champion in the same season.
 
 ## Getting Started
 
-To get you started you can simply unzip the `f1WorldChampionLists` folder and install the dependencies:
+To get you started you can simply unzip the `f1WorldChampionLists-angular-12` folder and install the dependencies:
 
 ### Install Dependencies
 
@@ -42,7 +42,7 @@ Now browse to the app at [`http://localhost:4200/`].
 
 ### Running Unit Tests
 
-The f1WorldChampionLists app comes some pre configured with unit tests. These are written in Jasmine, which we run with the Karma test runner.
+The f1WorldChampionLists-angular-12 app comes some pre configured with unit tests. These are written in Jasmine, which we run with the Karma test runner.
 
 ```
 ng test
