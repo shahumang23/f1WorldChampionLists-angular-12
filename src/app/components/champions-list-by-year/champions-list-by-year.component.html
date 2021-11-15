@@ -1,0 +1,27 @@
+<div class="champions-list-by-year container mt-4">
+    <app-header [icon]="icon" [title]="title"></app-header>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Country</th>
+          <th>Driver Name</th>
+          <th>Team</th>
+          <th>Point</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable" *ngFor="let yearOfWinner of standingsLists" (click)="selectedYear(yearOfWinner.season, yearOfWinner.DriverStandings[0].Driver.givenName)">
+          <td>{{yearOfWinner.season}}</td>
+          <td>
+            <img src="assets/img/flags/{{yearOfWinner.DriverStandings[0].Driver.nationality}}.png" />
+          </td>
+          <td>
+              {{yearOfWinner.DriverStandings[0].Driver.givenName}}&nbsp;{{yearOfWinner.DriverStandings[0].Driver.familyName}}
+          </td>
+          <td>{{yearOfWinner.DriverStandings[0].Constructors[0].name}}</td>
+          <td>{{yearOfWinner.DriverStandings[0].points}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

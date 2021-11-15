@@ -1,0 +1,13 @@
+@import '../../styles/_vars.scss';
+
+.app-header {
+  .navbar {
+    background-color: $primary-blue;
+    border-radius: 1rem 1rem 0 0;
+    color: $navbar;
+    justify-content: left;
+    .navbar-brand {
+      color: $navbar-brand;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <a routerLink=".." class="btn btn-light mb-4" role="button">Back to drivers list</a>
+  <app-header [icon]="icon" [title]="title"></app-header>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Grand Prix</th>
+        <th>Date</th>
+        <th>Winner Name</th>
+        <th>Team</th>
+        <th>Laps</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let race of seasonRaceListValue" [ngClass]="{'table-success': race.Results[0].Driver.givenName == selectedChampionShipYearValue.winnerName}">
+        <td>
+          <img src="assets/img/flags/{{ race.Circuit.Location.country }}.png" />
+          {{ race.raceName }}
+        </td>
+        <td>{{ race.date }}</td>
+        <td>
+          {{ race.Results[0].Driver.givenName }}&nbsp;{{
+            race.Results[0].Driver.familyName
+          }}
+        </td>
+        <td>{{ race.Results[0].Constructor.name }}</td>
+        <td>{{ race.Results[0].laps }}</td>
+        <td>{{ race.Results[0].Time.time }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
